@@ -228,17 +228,6 @@ class Main {
 					}
 				}
 				else {
-					// SDL Windows 64bits
-					makeHl(baseRedistDir+"/opengl_win/"+projectName, HL_RUNTIME_FILES_WIN, false);
-					if( zipping )
-						zipFolder( '$baseRedistDir/${projectName}_opengl_win.zip', baseRedistDir+"/opengl_win/");
-
-					// SDL Windows 32bits
-					if( hasParameter("-hl32") ) {
-						makeHl(baseRedistDir+"/opengl_win32/"+projectName, HL_RUNTIME_FILES_WIN, true);
-						if( zipping )
-							zipFolder( '$baseRedistDir/${projectName}_opengl_win32.zip', baseRedistDir+"/opengl_win32/");
-					}
 
 					// SDL Mac
 					makeHl(baseRedistDir+"/opengl_mac/"+projectName, HL_RUNTIME_FILES_MAC, false);
